@@ -11,8 +11,9 @@ services:
       - "12080:80"
       - "12443:443"
     volumes:
+      - ./public:/var/www/html
       - .:/var/www
-    working_dir: /var/www/public
+    working_dir: /var/www/src
     networks:
       - catamongo.net
 
@@ -22,8 +23,7 @@ services:
   mongo:
     image: mongo:latest
     volumes:
-    - ./data:/var/data
-    working_dir: /var/data
+    - ./data:/data
     networks:
     - catamongo.net
     ports:
