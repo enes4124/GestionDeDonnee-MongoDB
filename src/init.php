@@ -2,9 +2,6 @@
 // Code source permettant d'accéder aux données parking du Grand Nancy
 require_once __DIR__ . '/../vendor/autoload.php';
 
-echo 'Hello World';
-
-
 $pis = [];
 
 $db = (new MongoDB\Client('mongodb://mongo'))->selectDatabase('tdmongo');
@@ -33,4 +30,4 @@ if (count($pis) > 0) {
   $res = $db->insertMany($pis);
 }
 
-var_dump($pis);
+require_once __DIR__ . '/display.php';
