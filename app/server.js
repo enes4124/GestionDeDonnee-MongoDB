@@ -6,7 +6,16 @@ const app = express();
 
 const db = require("./routes/db");
 
-app.use("/", db);
+app.use("/nancy", db);
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/src/index.html");
+});
+
+app.get("/:catchall", (req, res) => {
+    res.sendFile(__dirname + "/error/error.html");
+});
+
 
 app.use((req, res, next) => {
     console.log("Une requête a été faite");
