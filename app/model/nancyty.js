@@ -11,10 +11,7 @@ async function getData() {
         const database = client.db('nancyty')
         const collection = database.collection('nancyty')
         const query = {}
-        const options = {
-            sort: { _id: -1 },
-            limit: 1
-        }
+        const options = {}
         const result = await collection.find(query, options).toArray()
         return result
     } catch (e) {
