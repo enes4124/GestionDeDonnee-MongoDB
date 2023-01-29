@@ -6,7 +6,7 @@ const app = express();
 
 const db = require("./routes/db");
 
-app.use("/json", db);
+app.use("/", db);
 
 app.use((req, res, next) => {
     console.log("Une requête a été faite");

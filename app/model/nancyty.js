@@ -1,6 +1,5 @@
 const { MongoClient } = require("mongodb");
 
-// const uri = "mongodb://root:password@tdmongo:27017/nancyty?authSource=admin";
 const uri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?authSource=admin`
 
 const client = new MongoClient(uri)
@@ -21,6 +20,50 @@ async function getData() {
     }
 }
 
+async function getFields() {
+    try {
+        await client.connect()
+        const database = client.db('nancyty')
+        const collection = database.collection('nancyty')
+        const query = {}
+        const options = {
+            projection: {
+                _id: 0,
+                "fields": 1
+            }
+        }
+        const result = await collection.find(query, options).toArray()
+        return result
+    } catch (e) {
+        console.error("error", e)
+    } finally {
+        await client.close()
+    }
+}
+
+async function getFeatures() {
+    try {
+        await client.connect()
+        const database = client.db('nancyty')
+        const collection = database.collection('nancyty')
+        const query = {}
+        const options = {
+            projection: {
+                _id: 0,
+                "features": 1
+            }
+        }
+        const result = await collection.find(query, options).toArray()
+        return result
+    } catch (e) {
+        console.error("error", e)
+    } finally {
+        await client.close()
+    }
+}
+
 module.exports = {
-    getData
+    getData,
+    getFields,
+    getFeatures
 }
