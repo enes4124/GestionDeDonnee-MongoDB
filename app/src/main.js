@@ -1,10 +1,22 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+let nancyCoordinates = [48.692054, 6.184417];
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+var map = L.map('map').setView(nancyCoordinates, 13)
 
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();
+// map a la taille de la fenetre
+map.invalidateSize();
 
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',).addTo(map);
+
+function getMarker() {
+    return fetch('/nancy/features')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            data.forEach(element => {
+                L.marker([element.geometry.y, element.geometry.x]).bindPopup(element.attributes.NOM).addTo(map);
+            });
+        })
+        .catch(error => console.error(error));
+}
+
+getMarker();

@@ -54,7 +54,7 @@ async function getFeatures() {
             }
         }
         const result = await collection.find(query, options).toArray()
-        return result
+        return result[0].features
     } catch (e) {
         console.error("error", e)
     } finally {
