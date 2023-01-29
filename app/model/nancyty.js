@@ -1,17 +1,27 @@
-const knex = require('knex')
+const { MongoClient } = require("mongodb");
 
-let db = knex({
-    client: 'mongodb',
-    connection: {
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        database: process.env.DB_NAME
+// const uri = "mongodb://root:password@tdmongo:27017/nancyty?authSource=admin";
+const uri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?authSource=admin`
+
+const client = new MongoClient(uri)
+
+async function getData() {
+    try {
+        await client.connect()
+        const database = client.db('nancyty')
+        const collection = database.collection('nancyty')
+        const query = {}
+        const options = {
+            sort: { _id: -1 },
+            limit: 1
+        }
+        const result = await collection.find(query, options).toArray()
+        return result
+    } catch (e) {
+        console.error("error", e)
+    } finally {
+        await client.close()
     }
-})
-
-function getData() {
-    return db('nancyty').select('*')
 }
 
 module.exports = {
