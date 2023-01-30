@@ -1,0 +1,295 @@
+[{
+  "_id": {
+    "$oid": "63d83b4a93c14a0a90fc2278"
+  },
+  "displayFieldName": "NOM",
+  "fieldAliases": {
+    "NOM": "NOM",
+    "ADRESSE": "ADRESSE",
+    "PLACES": "PLACES",
+    "CAPACITE": "CAPACITE"
+  },
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "NOM",
+      "type": "esriFieldTypeString",
+      "alias": "NOM",
+      "length": 30
+    },
+    {
+      "name": "ADRESSE",
+      "type": "esriFieldTypeString",
+      "alias": "ADRESSE",
+      "length": 50
+    },
+    {
+      "name": "PLACES",
+      "type": "esriFieldTypeInteger",
+      "alias": "PLACES"
+    },
+    {
+      "name": "CAPACITE",
+      "type": "esriFieldTypeInteger",
+      "alias": "CAPACITE"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "NOM": "Mouzimpré",
+        "ADRESSE": "Rue des Prés",
+        "PLACES": null,
+        "CAPACITE": 240
+      },
+      "geometry": {
+        "x": 6.225296815176762,
+        "y": 48.702018030790775
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Institut de Cancerologie",
+        "ADRESSE": "6 Avenue de Bourgogne",
+        "PLACES": null,
+        "CAPACITE": null
+      },
+      "geometry": {
+        "x": 6.144662673632979,
+        "y": 48.64818636323311
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Trois Maisons",
+        "ADRESSE": "Rue Charles Keller",
+        "PLACES": 8,
+        "CAPACITE": null
+      },
+      "geometry": {
+        "x": 6.175550928103099,
+        "y": 48.7038484821876
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "République",
+        "ADRESSE": "Boulevard Joffre",
+        "PLACES": 327,
+        "CAPACITE": 450
+      },
+      "geometry": {
+        "x": 6.179456422512133,
+        "y": 48.68663079063309
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Charles III",
+        "ADRESSE": "Place Henry Mengin",
+        "PLACES": 193,
+        "CAPACITE": 343
+      },
+      "geometry": {
+        "x": 6.181679046362918,
+        "y": 48.689344305393064
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Dom Calmet",
+        "ADRESSE": "Rue Dom Calmet",
+        "PLACES": 89,
+        "CAPACITE": 205
+      },
+      "geometry": {
+        "x": 6.181028158837266,
+        "y": 48.69158764776406
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Gare Thiers",
+        "ADRESSE": "Rue Mazagran",
+        "PLACES": 291,
+        "CAPACITE": 648
+      },
+      "geometry": {
+        "x": 6.175736179907492,
+        "y": 48.69008821416744
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Joffre St-Thiebaut",
+        "ADRESSE": "Rue du Grand Rabbin Haguenauer",
+        "PLACES": 483,
+        "CAPACITE": 466
+      },
+      "geometry": {
+        "x": 6.179610008858117,
+        "y": 48.68778733562811
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Kennedy",
+        "ADRESSE": "Rue Jacques Bellange",
+        "PLACES": 260,
+        "CAPACITE": 295
+      },
+      "geometry": {
+        "x": 6.173533691247536,
+        "y": 48.68585656828219
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Les Deux Rives",
+        "ADRESSE": "Rue Emilie du Chatelet",
+        "PLACES": 221,
+        "CAPACITE": 519
+      },
+      "geometry": {
+        "x": 6.195891937686726,
+        "y": 48.695298083887955
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Manufacture",
+        "ADRESSE": "74 Quai Claude le Lorrain",
+        "PLACES": null,
+        "CAPACITE": 241
+      },
+      "geometry": {
+        "x": 6.170707627127843,
+        "y": 48.69698832700811
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Place des Vosges",
+        "ADRESSE": "23 Places des Vosges",
+        "PLACES": 78,
+        "CAPACITE": 197
+      },
+      "geometry": {
+        "x": 6.188226790223143,
+        "y": 48.684685237596106
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Place Stanislas",
+        "ADRESSE": "6 Rue Claude Charles",
+        "PLACES": 277,
+        "CAPACITE": 383
+      },
+      "geometry": {
+        "x": 6.184944336425358,
+        "y": 48.69221686254311
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Saint-Dizier",
+        "ADRESSE": "Rue des Soeurs Macarons",
+        "PLACES": 75,
+        "CAPACITE": 209
+      },
+      "geometry": {
+        "x": 6.184439359956837,
+        "y": 48.68924334822768
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Saint-Leon",
+        "ADRESSE": "Rue Saint-Leon",
+        "PLACES": 144,
+        "CAPACITE": 224
+      },
+      "geometry": {
+        "x": 6.172779846917692,
+        "y": 48.68920975126067
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Saint-Nicolas",
+        "ADRESSE": "32 Rue des Fabriques",
+        "PLACES": 350,
+        "CAPACITE": 600
+      },
+      "geometry": {
+        "x": 6.189404780236048,
+        "y": 48.68731498903684
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Saint-Sebastien",
+        "ADRESSE": "Centre Commercial Saint-Sebastien",
+        "PLACES": 1097,
+        "CAPACITE": 1200
+      },
+      "geometry": {
+        "x": 6.181736957143453,
+        "y": 48.68729748700634
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Vaudemont",
+        "ADRESSE": "Terrasse de la Pépinière",
+        "PLACES": 147,
+        "CAPACITE": 195
+      },
+      "geometry": {
+        "x": 6.184181138851583,
+        "y": 48.69459747282067
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Ville Vielle Carnot",
+        "ADRESSE": "Place Carnot",
+        "PLACES": 181,
+        "CAPACITE": 371
+      },
+      "geometry": {
+        "x": 6.178138107468003,
+        "y": 48.69322213174933
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Ville Vielle Leopold",
+        "ADRESSE": "Cours Léopold",
+        "PLACES": 289,
+        "CAPACITE": 400
+      },
+      "geometry": {
+        "x": 6.1762485453637765,
+        "y": 48.69538478548938
+      }
+    },
+    {
+      "attributes": {
+        "NOM": "Brabois",
+        "ADRESSE": "Avenue de Bourgogne",
+        "PLACES": null,
+        "CAPACITE": 530
+      },
+      "geometry": {
+        "x": 6.146292946040967,
+        "y": 48.64907009599818
+      }
+    }
+  ]
+}]
