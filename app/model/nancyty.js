@@ -8,7 +8,7 @@ async function getData() {
     try {
         await client.connect()
         const database = client.db('nancyty')
-        const collection = database.collection('nancyty')
+        const collection = database.collection('parking')
         const query = {}
         const options = {}
         const result = await collection.find(query, options).toArray()
@@ -24,7 +24,7 @@ async function getFields() {
     try {
         await client.connect()
         const database = client.db('nancyty')
-        const collection = database.collection('nancyty')
+        const collection = database.collection('parking')
         const query = {}
         const options = {
             projection: {
@@ -45,7 +45,7 @@ async function getFeatures() {
     try {
         await client.connect()
         const database = client.db('nancyty')
-        const collection = database.collection('nancyty')
+        const collection = database.collection('parking')
         const query = {}
         const options = {
             projection: {
@@ -62,8 +62,48 @@ async function getFeatures() {
     }
 }
 
+async function getBike() { 
+    try {
+        await client.connect()
+        const database = client.db('nancyty')
+        const collection = database.collection('bike')
+        const query = {}
+        const options = {
+            projection: {
+                _id: 0,
+                "data.stations": 1
+            }
+        }
+        const result = await collection.find(query, options).toArray()
+        return result[0].data.stations
+    } catch (e) {
+        console.error("error", e)
+    } finally {
+        await client.close()
+    }
+}
+
+async function getBus() {
+    try {
+        await client.connect()
+        const database = client.db('nancyty')
+        const collection = database.collection('bus')
+        const query = {}
+        const options = {}
+        const result = await collection.find(query, options).toArray()
+        return result[0].features
+    } catch (e) {
+        console.error("error", e)
+    } finally {
+        await client.close()
+    }
+}
+
+
 module.exports = {
     getData,
     getFields,
-    getFeatures
+    getFeatures,
+    getBike,
+    getBus
 }

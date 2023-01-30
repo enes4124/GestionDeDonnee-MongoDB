@@ -4,25 +4,30 @@ const port = 3000;
 
 const app = express();
 
-const db = require("./routes/db");
-
-app.use("/nancy", db);
+const parking = require("./routes/parking");
+const bike = require("./routes/bike");
+const bus = require("./routes/bus");
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/src/index.html");
 });
 
+app.use("/parking", parking);
+
+app.use("/bike", bike);
+
+app.use("/bus", bus);
+
 app.get("/main", (req, res) => {
     res.sendFile(__dirname + "/src/main.js");
 });
 
-app.get("/:catchall", (req, res) => {
-    res.sendFile(__dirname + "/error/error.html");
+app.use((req, res, next) => {
+    res.status(404).send("Page introuvable");
 });
 
-app.use((req, res, next) => {
-    console.log("Une requête a été faite");
-    next();
+app.get("/:catchall", (req, res) => {
+    res.sendFile(__dirname + "/error/error.html");
 });
 
 app.listen(port, () => {
