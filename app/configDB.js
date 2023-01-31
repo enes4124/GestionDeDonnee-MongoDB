@@ -1,6 +1,5 @@
 const mongo = require("mongodb");
 const fs = require("fs");
-const { get } = require("http");
 
 const MongoClient = mongo.MongoClient;
 

@@ -46,10 +46,12 @@ function getMarkerParking() {
     .then((response) => response.json())
     .then((data) => {
       data.forEach((element) => {
+        let text = element.attributes.NOM + ", " + element.attributes.ADRESSE + ", " + element.attributes.PLACES + " places disponibles";
+
         L.marker([element.geometry.y, element.geometry.x], {
           icon: parkingIcon,
         })
-          .bindPopup(element.attributes.NOM)
+          .bindPopup(text)
           .addTo(map);
       });
     })
