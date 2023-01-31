@@ -53,7 +53,10 @@ function getMarkerParking() {
           .addTo(map);
       });
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+        console.error(error)
+        getMarkerParking()
+    });
 }
 
 function getMarkerBike() {
@@ -66,7 +69,10 @@ function getMarkerBike() {
           .addTo(map);
       });
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+        console.error(error)
+        getMarkerBike()
+    });
 }
 
 function getMarkerBus() {
@@ -100,7 +106,10 @@ function getMarkerBus() {
         // par raison de performance on affiche pas les bus qui font plusieurs arrêts
       });
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+        console.error(error)
+        getMarkerBus()
+    });
 }
 
 getMarkerParking();

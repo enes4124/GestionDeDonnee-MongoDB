@@ -4,6 +4,10 @@ const port = 3000;
 
 const app = express();
 
+const config = require("./configDB");
+config.configDB();
+
+
 const parking = require("./routes/parking");
 const bike = require("./routes/bike");
 const bus = require("./routes/bus");

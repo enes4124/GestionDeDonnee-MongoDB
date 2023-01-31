@@ -1,5 +1,5 @@
-[{
-  "_id": {
+{
+  "id": {
     "$oid": "63d8414793c14a0a90fc227c"
   },
   "features": [
@@ -147901,4 +147901,4 @@
     }
   ],
   "type": "FeatureCollection"
-}]
+}
