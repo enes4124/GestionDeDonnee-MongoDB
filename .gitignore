@@ -1,0 +1,8 @@
+# ignorer node_modules
+app/node_modules
+
+# ignorer .env
+.env
+
+# ignorer package-lock.json dans le dossier app
+app/package-lock.json
